@@ -1,0 +1,1604 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fangs22 — 个人主页</title>
+  <meta name="description" content="fangs22 的个人 GitHub 主页：机器学习、计算机视觉、量化交易与开源收藏。一份从 GitHub 公开资料出发的个人档案。">
+  <meta name="theme-color" content="#f4ede1">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="fangs22 — 个人主页">
+  <meta property="og:description" content="保持好奇，持续构建。fangs22 的个人 GitHub 主页：关注机器学习、计算机视觉、量化交易与开源收藏。">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/47218540?v=4">
+  <meta property="profile:username" content="fangs22">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239c3a25'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-style='italic' fill='%23f4ede1' text-anchor='middle'%3Ef%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --paper: #f4ede1;
+      --paper-deep: #ece2d2;
+      --paper-tint: #e6d9c5;
+      --ink: #1b1511;
+      --soft: #5f5549;
+      --faint: #6d6151;
+      --rule: #cec2b0;
+      --rule-strong: #a99a84;
+      --accent: #9c3a25;
+      --accent-bright: #bf4e2b;
+      --accent-soft: #efd6bf;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
+      --max: 1180px;
+      --gutter: clamp(20px, 5vw, 76px);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(900px 520px at 8% -12%, rgba(191, 78, 43, 0.1), transparent 62%),
+        radial-gradient(700px 460px at 102% 34%, rgba(156, 58, 37, 0.06), transparent 60%),
+        var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--paper);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -80px;
+      left: 20px;
+      z-index: 10000;
+      padding: 10px 16px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      pointer-events: none;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - (var(--gutter) * 2)));
+      margin-inline: auto;
+    }
+
+    .topline {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .topline-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 0;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .topline-mid {
+      color: var(--soft);
+    }
+
+    .masthead {
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .masthead-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 17px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.015em;
+    }
+
+    .brand-sep {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 17px;
+    }
+
+    .brand-sub {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      color: var(--soft);
+      padding-bottom: 3px;
+      border-bottom: 1px solid transparent;
+      text-decoration: none;
+      transition: color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .nav-ext {
+      padding: 7px 11px !important;
+      border: 1px solid var(--accent) !important;
+      background: transparent;
+      color: var(--accent) !important;
+      transition: background-color 0.18s ease, color 0.18s ease !important;
+    }
+
+    .nav-ext:hover {
+      background: var(--accent);
+      color: var(--paper) !important;
+    }
+
+    main {
+      display: block;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+      gap: clamp(40px, 6vw, 96px);
+      align-items: start;
+      padding: clamp(54px, 7.5vw, 94px) 0 clamp(44px, 6vw, 70px);
+    }
+
+    .hero-copy > * {
+      animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+
+    .hero-copy > :nth-child(2) {
+      animation-delay: 0.06s;
+    }
+
+    .hero-copy > :nth-child(3) {
+      animation-delay: 0.12s;
+    }
+
+    .hero-copy > :nth-child(4) {
+      animation-delay: 0.18s;
+    }
+
+    .hero-copy > :nth-child(5) {
+      animation-delay: 0.24s;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      flex: none;
+    }
+
+    h1 {
+      margin: 22px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(3.35rem, 7.15vw, 5.9rem);
+      font-weight: 600;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-line {
+      display: block;
+    }
+
+    .hero-line.accent {
+      color: var(--accent);
+    }
+
+    .lede {
+      max-width: 36em;
+      margin: 27px 0 0;
+      color: var(--soft);
+      font-family: var(--serif);
+      font-size: clamp(1.02rem, 1.4vw, 1.18rem);
+      line-height: 1.9;
+      text-wrap: pretty;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 13px 20px;
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--paper);
+    }
+
+    .btn .arrow {
+      font-family: var(--sans);
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 0;
+      margin: 42px 0 0;
+      padding: 17px 0 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .hero-stats div {
+      padding-right: 24px;
+      margin-right: 24px;
+      border-right: 1px solid var(--rule);
+    }
+
+    .hero-stats div:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      border-right: 0;
+    }
+
+    .hero-stats dt {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .hero-stats dd {
+      margin: 5px 0 0;
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .portrait {
+      position: relative;
+      padding-top: 8px;
+    }
+
+    .portrait-figure {
+      position: relative;
+      max-width: 408px;
+      margin: 0 0 0 auto;
+      animation: rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+
+    .portrait-figure::before {
+      content: "";
+      position: absolute;
+      inset: 18px -18px -18px 18px;
+      z-index: 0;
+      border: 1px solid var(--rule-strong);
+      background: var(--accent-soft);
+    }
+
+    .portrait-img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 1px solid var(--ink);
+      filter: saturate(0.94) contrast(1.03) sepia(0.06);
+    }
+
+    .stamp {
+      position: absolute;
+      top: -13px;
+      left: -19px;
+      z-index: 2;
+      transform: rotate(-6.5deg);
+      padding: 7px 10px;
+      border: 1px solid var(--accent);
+      background: var(--paper);
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .portrait-figure figcaption {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 15px;
+      padding-top: 8px;
+      border-top: 1px solid var(--rule);
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .portrait-note {
+      max-width: 370px;
+      margin: 18px 0 0 auto;
+      color: var(--soft);
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.7;
+      text-align: right;
+    }
+
+    .strip {
+      border-block: 1px solid var(--rule);
+      background: var(--paper-deep);
+    }
+
+    .strip-inner {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .strip-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0 12px 18px;
+      border-left: 1px solid var(--rule);
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .strip-item:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .strip-num {
+      color: var(--accent);
+    }
+
+    .section {
+      padding: clamp(62px, 8vw, 100px) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 27px;
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: var(--rule-strong);
+      flex: none;
+    }
+
+    .section-label b {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .section h2 {
+      max-width: 16em;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.1rem, 4vw, 3.35rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 42px;
+    }
+
+    .section-head p {
+      max-width: 34ch;
+      margin: 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+      gap: clamp(40px, 6vw, 92px);
+      margin-top: 40px;
+    }
+
+    .about-copy p {
+      max-width: 50em;
+      margin: 0 0 20px;
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.15vw, 1.1rem);
+      line-height: 1.95;
+    }
+
+    .about-copy p:first-of-type::first-letter {
+      float: left;
+      padding: 0.08em 0.12em 0 0;
+      color: var(--accent);
+      font-size: 4.2em;
+      font-weight: 600;
+      line-height: 0.82;
+    }
+
+    .pullquote {
+      margin: 32px 0;
+      padding: 5px 0 5px 22px;
+      border-left: 2px solid var(--accent);
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 1.9vw, 1.5rem);
+      line-height: 1.55;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 28px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border: 1px solid var(--rule-strong);
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .factsheet {
+      padding-top: 14px;
+      border-top: 1px solid var(--ink);
+    }
+
+    .factsheet .caption {
+      margin-bottom: 10px;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .factsheet dl {
+      margin: 0 0 30px;
+    }
+
+    .fact-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .fact-row dt {
+      color: var(--soft);
+      font-size: 13px;
+    }
+
+    .fact-row dd {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.03em;
+      text-align: right;
+    }
+
+    .mini-timeline {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .mini-timeline li {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--rule);
+      color: var(--soft);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .mini-timeline .year {
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 10px;
+      padding-top: 2px;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 44px;
+      border-top: 1px solid var(--ink);
+    }
+
+    .focus-item {
+      padding: 26px 28px 34px;
+      border-right: 1px solid var(--rule);
+    }
+
+    .focus-item:first-child {
+      padding-left: 0;
+    }
+
+    .focus-item:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+
+    .focus-index {
+      margin-bottom: 32px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.12em;
+    }
+
+    .focus-item h3 {
+      margin: 0 0 12px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .focus-item p {
+      margin: 0 0 18px;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .inline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .inline-links a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--rule-strong);
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .inline-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr) 250px;
+      margin-top: 42px;
+      border: 1px solid var(--ink);
+      background: var(--paper-deep);
+    }
+
+    .project-no {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 20px;
+      border-right: 1px solid var(--rule-strong);
+    }
+
+    .project-no span {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .project-no strong {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 62px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .project-main {
+      padding: clamp(24px, 4vw, 38px);
+    }
+
+    .project-kicker {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .project-main h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(1.65rem, 2.5vw, 2.1rem);
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .project-main > p:not(.project-kicker) {
+      max-width: 48ch;
+      margin: 14px 0 0;
+      color: var(--soft);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .project-main .tags {
+      margin-top: 20px;
+    }
+
+    .project-main .inline-links {
+      margin-top: 22px;
+    }
+
+    .project-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 20px;
+      border-left: 1px solid var(--rule-strong);
+    }
+
+    .side-year {
+      margin: 10px 0;
+      color: var(--rule-strong);
+      font-family: var(--serif);
+      font-size: 44px;
+      line-height: 1;
+    }
+
+    .side-note {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.06em;
+      line-height: 1.7;
+      text-transform: uppercase;
+    }
+
+    .reading-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 38px;
+    }
+
+    .reading-head p {
+      max-width: 36ch;
+      margin: 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .reading-list {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--ink);
+      list-style: none;
+    }
+
+    .reading-list li {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .reading-link {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1.05fr) minmax(0, 1.3fr) 112px 18px;
+      gap: 18px;
+      align-items: baseline;
+      padding: 19px 0;
+      text-decoration: none;
+      transition: background-color 0.18s ease, padding 0.18s ease;
+    }
+
+    .reading-link:hover {
+      padding-inline: 12px;
+      background: var(--accent-soft);
+    }
+
+    .reading-index {
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.08em;
+    }
+
+    .reading-name {
+      overflow: hidden;
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.3;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .reading-desc {
+      color: var(--soft);
+      font-size: 12.5px;
+      line-height: 1.6;
+    }
+
+    .reading-meta {
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.07em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    .reading-arrow {
+      color: var(--accent);
+      font-family: var(--sans);
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .reading-foot {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px 30px;
+      margin-top: 18px;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      line-height: 1.7;
+    }
+
+    .reading-foot a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule-strong);
+      padding-bottom: 2px;
+    }
+
+    .reading-foot a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .connect {
+      padding: clamp(70px, 10vw, 118px) 0;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .connect-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+      gap: clamp(40px, 7vw, 90px);
+      align-items: end;
+    }
+
+    .connect h2 {
+      max-width: 12ch;
+      font-size: clamp(2.8rem, 6.4vw, 4.9rem);
+      line-height: 1.04;
+    }
+
+    .connect h2 em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .connect-copy p {
+      max-width: 36ch;
+      margin: 0;
+      color: var(--soft);
+      font-family: var(--serif);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .connect-copy .btn {
+      margin-top: 24px;
+    }
+
+    .connect-meta {
+      margin: 20px 0 0;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .site-footer {
+      padding: 22px 0 34px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 28px;
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      line-height: 1.7;
+      text-transform: uppercase;
+    }
+
+    .footer-inner a {
+      color: var(--soft);
+      text-decoration: none;
+    }
+
+    .footer-inner a:hover {
+      color: var(--accent);
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 44px;
+      }
+
+      .portrait {
+        max-width: 420px;
+      }
+
+      .portrait-figure {
+        margin-left: 0;
+      }
+
+      .portrait-note {
+        margin-left: 0;
+        text-align: left;
+      }
+
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 44px;
+      }
+
+      .focus-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .focus-item,
+      .focus-item:first-child,
+      .focus-item:last-child {
+        padding: 24px 0 28px;
+        border-right: 0;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .focus-item:last-child {
+        border-bottom: 0;
+      }
+
+      .focus-index {
+        margin-bottom: 18px;
+      }
+
+      .project {
+        grid-template-columns: 90px minmax(0, 1fr);
+      }
+
+      .project-side {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 18px;
+        border-top: 1px solid var(--rule-strong);
+        border-left: 0;
+      }
+
+      .side-year {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      .connect-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topline-mid,
+      .topline-right {
+        display: none;
+      }
+
+      .topline-inner {
+        justify-content: flex-start;
+      }
+
+      .nav a:not(.nav-ext) {
+        display: none;
+      }
+
+      .masthead-inner {
+        gap: 14px;
+      }
+
+      .brand-sub,
+      .brand-sep {
+        display: none;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 15px;
+      }
+
+      .hero-stats div {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+      }
+
+      .strip-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .strip-item {
+        padding: 10px 10px;
+        font-size: 8px;
+        white-space: normal;
+      }
+
+      .strip-item:nth-child(3) {
+        border-left: 0;
+      }
+
+      .strip-item:nth-child(n + 3) {
+        border-top: 1px solid var(--rule);
+      }
+
+      .section-head,
+      .reading-head {
+        display: block;
+      }
+
+      .section-head p,
+      .reading-head p {
+        margin-top: 16px;
+      }
+
+      .project {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .project-no {
+        flex-direction: row;
+        align-items: baseline;
+        border-right: 0;
+        border-bottom: 1px solid var(--rule-strong);
+      }
+
+      .project-no strong {
+        font-size: 44px;
+      }
+
+      .reading-link {
+        grid-template-columns: 28px minmax(0, 1fr) 18px;
+        gap: 12px;
+        padding: 16px 0;
+      }
+
+      .reading-desc {
+        grid-column: 2 / 3;
+        margin-top: -6px;
+      }
+
+      .reading-meta {
+        display: none;
+      }
+
+      .reading-name {
+        font-size: 18px;
+        white-space: normal;
+      }
+
+      .reading-link:hover {
+        padding-inline: 8px;
+      }
+
+      .reading-foot {
+        display: block;
+      }
+
+      .reading-foot span {
+        display: block;
+      }
+
+      .reading-foot span + span {
+        margin-top: 8px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .brand-name {
+        font-size: 19px;
+      }
+
+      .nav {
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: clamp(2.95rem, 15vw, 3.5rem);
+      }
+
+      .hero-stats dd {
+        font-size: 20px;
+      }
+
+      .project-main h3 {
+        font-size: 1.55rem;
+      }
+
+      .connect h2 {
+        font-size: clamp(2.45rem, 12vw, 3.1rem);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    @media print {
+      body::after,
+      .progress {
+        display: none;
+      }
+
+      .hero-copy > *,
+      .portrait-figure {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <div class="topline">
+    <div class="shell topline-inner">
+      <span>Personal homepage</span>
+      <span class="topline-mid">Est. 2019 · Vol. 01 / 2026</span>
+      <span class="topline-right">github.com/fangs22</span>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <a class="brand" href="#top" aria-label="fangs22 个人主页">
+        <span class="brand-name">FANGS22</span>
+        <span class="brand-sep" aria-hidden="true">·</span>
+        <span class="brand-sub">Personal index</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#focus">关注</a>
+        <a href="#work">项目</a>
+        <a href="#reading">阅读</a>
+        <a href="#contact">联系</a>
+        <a class="nav-ext" href="https://github.com/fangs22" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Open source · Personal archive · Since 2019</p>
+        <h1 id="hero-title">
+          <span class="hero-line">保持好奇，</span>
+          <span class="hero-line accent">持续构建。</span>
+        </h1>
+        <p class="lede">
+          我是 fangs22，一名在开源世界里持续学习与收藏的开发者。这里整理我关注的技术方向、
+          动手做过的项目，以及一份还在生长的阅读清单。
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/fangs22" target="_blank" rel="noopener noreferrer">
+            在 GitHub 找到我
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="btn" href="#reading">
+            浏览阅读清单
+            <span class="arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <dl class="hero-stats" aria-label="GitHub 数据快照">
+          <div>
+            <dt>公开仓库</dt>
+            <dd>20</dd>
+          </div>
+          <div>
+            <dt>原创项目</dt>
+            <dd>01</dd>
+          </div>
+          <div>
+            <dt>关注方向</dt>
+            <dd>03</dd>
+          </div>
+          <div>
+            <dt>加入 GitHub</dt>
+            <dd>2019</dd>
+          </div>
+        </dl>
+      </div>
+
+      <aside class="portrait" aria-label="头像与说明">
+        <figure class="portrait-figure">
+          <span class="stamp">GitHub / Since 2019</span>
+          <img class="portrait-img" src="assets/fangs22-avatar.jpg" alt="fangs22 的 GitHub 头像：一个穿橙色袍子的卡通人物" width="401" height="401">
+          <figcaption>
+            <span>Fig. 01 — fangs22</span>
+            <span>Public avatar</span>
+          </figcaption>
+        </figure>
+        <p class="portrait-note">一张公开头像，和一份还在生长的主页。</p>
+      </aside>
+    </section>
+
+    <div class="strip" aria-hidden="true">
+      <div class="shell strip-inner">
+        <span class="strip-item"><span class="strip-num">01</span> Learn in public</span>
+        <span class="strip-item"><span class="strip-num">02</span> Collect</span>
+        <span class="strip-item"><span class="strip-num">03</span> Build</span>
+        <span class="strip-item"><span class="strip-num">04</span> Repeat</span>
+      </div>
+    </div>
+
+    <section class="section shell" id="about" aria-labelledby="about-title">
+      <div class="section-label"><b>01</b> / 关于</div>
+      <h2 id="about-title">一份从 GitHub<br>生长出来的个人档案。</h2>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            我是 fangs22。这个页面没有包装过的履历，只有从 GitHub 公开资料里整理出的几条线索：
+            我收藏了什么、关注什么、动手做过什么。
+          </p>
+          <p>
+            大部分仓库是我从社区里收下的资料与工具，少数是自己完成的实验和比赛方案。
+            它们不一定完整，但都代表某个阶段的好奇心。机器学习、计算机视觉和量化交易，
+            是我反复回到的三个方向。
+          </p>
+          <blockquote class="pullquote">先把感兴趣的东西收进来，再慢慢把它们变成自己的工具。</blockquote>
+          <p>这个主页会继续生长。下一步，是把收藏变成实践，把实践写成记录。</p>
+
+          <div class="tags" aria-label="关注方向">
+            <span class="tag">机器学习</span>
+            <span class="tag">计算机视觉</span>
+            <span class="tag">量化交易</span>
+            <span class="tag">开源工具</span>
+            <span class="tag">持续学习</span>
+          </div>
+        </div>
+
+        <aside class="factsheet" aria-label="GitHub 档案">
+          <div class="caption">At a glance</div>
+          <dl>
+            <div class="fact-row">
+              <dt>公开仓库</dt>
+              <dd>20</dd>
+            </div>
+            <div class="fact-row">
+              <dt>原创仓库</dt>
+              <dd>01</dd>
+            </div>
+            <div class="fact-row">
+              <dt>加入 GitHub</dt>
+              <dd>2019.01</dd>
+            </div>
+            <div class="fact-row">
+              <dt>数据快照</dt>
+              <dd>2026.11</dd>
+            </div>
+          </dl>
+
+          <div class="caption">Timeline</div>
+          <ol class="mini-timeline">
+            <li><span class="year">2019</span><span>加入 GitHub</span></li>
+            <li><span class="year">2020</span><span>完成 SSD300 垃圾分类比赛方案</span></li>
+            <li><span class="year">2022–23</span><span>收藏视觉、量化与算法资料</span></li>
+            <li><span class="year">2026</span><span>搭建这份个人主页</span></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section shell" id="focus" aria-labelledby="focus-title">
+      <div class="section-label"><b>02</b> / 关注</div>
+      <div class="section-head">
+        <h2 id="focus-title">三个长期关注的方向。</h2>
+        <p>不一定精通，但愿意持续投入。每一次收藏、复现和折腾，都是理解它们的方式。</p>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-item">
+          <div class="focus-index">01 / Machine learning &amp; vision</div>
+          <h3>机器学习与视觉</h3>
+          <p>从《西瓜书》公式、NeRF 论文清单，到 SAM 与开放词汇检测。习惯把论文和代码放在一起看。</p>
+          <div class="inline-links">
+            <a href="https://github.com/fangs22/pumpkin-book" target="_blank" rel="noopener noreferrer">pumpkin-book ↗</a>
+            <a href="https://github.com/fangs22/awesome-NeRF" target="_blank" rel="noopener noreferrer">awesome-NeRF ↗</a>
+          </div>
+        </article>
+
+        <article class="focus-item">
+          <div class="focus-index">02 / Quant &amp; data</div>
+          <h3>量化与数据</h3>
+          <p>vnpy、zipline、QUANTAXIS：关注数据、回测与交易系统，试图理解数字背后的结构。</p>
+          <div class="inline-links">
+            <a href="https://github.com/fangs22/vnpy" target="_blank" rel="noopener noreferrer">vnpy ↗</a>
+            <a href="https://github.com/fangs22/zipline-chinese" target="_blank" rel="noopener noreferrer">zipline-chinese ↗</a>
+          </div>
+        </article>
+
+        <article class="focus-item">
+          <div class="focus-index">03 / Algorithms &amp; craft</div>
+          <h3>算法与工程</h3>
+          <p>LeetCode、PyTorch、检测框架。相信把想法跑起来，比只停留在阅读里更重要。</p>
+          <div class="inline-links">
+            <a href="https://github.com/fangs22/leetcode-master" target="_blank" rel="noopener noreferrer">leetcode-master ↗</a>
+            <a href="https://github.com/fangs22/ssd300-ciou-pytorch" target="_blank" rel="noopener noreferrer">ssd300-ciou ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-label"><b>03</b> / 项目</div>
+      <div class="section-head">
+        <h2 id="work-title">从比赛方案开始。</h2>
+        <p>公开仓库里，这是一个从零写起的项目。其余大多是对社区资料与工具的收藏。</p>
+      </div>
+
+      <article class="project">
+        <div class="project-no">
+          <span>Selected</span>
+          <strong>01</strong>
+        </div>
+        <div class="project-main">
+          <p class="project-kicker">Original repository / 2020</p>
+          <h3>SSD300-CIoU 垃圾分类</h3>
+          <p>
+            2020 年「华为云杯」深圳开放数据应用创新大赛的垃圾分类方案。基于 SSD300 目标检测框架，
+            尝试以 CIoU 改进定位质量，并用 PyTorch 实现、开源。
+          </p>
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">SSD300</span>
+            <span class="tag">CIoU</span>
+            <span class="tag">Object detection</span>
+          </div>
+          <div class="inline-links">
+            <a href="https://github.com/fangs22/ssd300-ciou-pytorch" target="_blank" rel="noopener noreferrer">查看仓库 ↗</a>
+          </div>
+        </div>
+        <div class="project-side">
+          <span class="side-note">Competition</span>
+          <span class="side-year">2020</span>
+          <span class="side-note">深圳 · 开放数据<br>应用创新大赛</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="section shell" id="reading" aria-labelledby="reading-title">
+      <div class="section-label"><b>04</b> / 阅读清单</div>
+      <div class="reading-head">
+        <h2 id="reading-title">收藏，也是一种学习。</h2>
+        <p>以下是我公开收藏的一部分仓库。它们来自社区，链接指向我的 fork；版权归原作者所有。</p>
+      </div>
+
+      <ol class="reading-list">
+        <li>
+          <a class="reading-link" href="https://github.com/fangs22/pumpkin-book" target="_blank" rel="noopener noreferrer">
+            <span class="reading-index">01</span>
+            <span class="reading-name">pumpkin-book</span>
+            <span class="reading-desc">《机器学习》西瓜书公式详解</span>
+            <span class="reading-meta">ML · 2023</span>
+            <span class="reading-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="reading-link" href="https://github.com/fangs22/awesome-NeRF" target="_blank" rel="noopener noreferrer">
+            <span class="reading-index">02</span>
+            <span class="reading-name">awesome-NeRF</span>
+            <span class="reading-desc">NeRF 论文与资源清单</span>
+            <span class="reading-meta">CV · 2023</span>
+            <span class="reading-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="reading-link" href="https://github.com/fangs22/Grounded-Segment-Anything" target="_blank" rel="noopener noreferrer">
+            <span class="reading-index">03</span>
+            <span class="reading-name">Grounded-Segment-Anything</span>
+            <span class="reading-desc">开放词汇检测与分割</span>
+            <span class="reading-meta">CV · 2023</span>
+            <span class="reading-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="reading-link" href="https://github.com/fangs22/vnpy" target="_blank" rel="noopener noreferrer">
+            <span class="reading-index">04</span>
+            <span class="reading-name">vnpy</span>
+            <span class="reading-desc">Python 量化交易平台</span>
+            <span class="reading-meta">Quant · 2023</span>
+            <span class="reading-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="reading-link" href="https://github.com/fangs22/zipline-chinese" target="_blank" rel="noopener noreferrer">
+            <span class="reading-index">05</span>
+            <span class="reading-name">zipline-chinese</span>
+            <span class="reading-desc">支持 A 股回测的 zipline</span>
+            <span class="reading-meta">Quant · 2023</span>
+            <span class="reading-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="reading-link" href="https://github.com/fangs22/leetcode-master" target="_blank" rel="noopener noreferrer">
+            <span class="reading-index">06</span>
+            <span class="reading-name">leetcode-master</span>
+            <span class="reading-desc">LeetCode 刷题攻略</span>
+            <span class="reading-meta">Algo · 2023</span>
+            <span class="reading-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ol>
+
+      <div class="reading-foot">
+        <span>数据快照 · 2026 年 11 月 · 以 GitHub 公开信息为准</span>
+        <span><a href="https://github.com/fangs22?tab=repositories" target="_blank" rel="noopener noreferrer">查看全部 20 个仓库 ↗</a></span>
+      </div>
+    </section>
+
+    <section class="connect shell" id="contact" aria-labelledby="contact-title">
+      <div class="section-label"><b>05</b> / 联系</div>
+      <div class="connect-grid">
+        <h2 id="contact-title">一起做点<br><em>有意思的事。</em></h2>
+        <div class="connect-copy">
+          <p>
+            如果你也在关注机器学习、计算机视觉或量化交易，或者只是想打个招呼，
+            欢迎在 GitHub 上找到我。这个页面会继续更新，下一次也许会有更多实践记录。
+          </p>
+          <a class="btn btn-primary" href="https://github.com/fangs22" target="_blank" rel="noopener noreferrer">
+            github.com/fangs22
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <p class="connect-meta">Open to conversation · No newsletter</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© <span id="year">2026</span> fangs22 — Personal index</span>
+      <span>Designed with an editorial eye · Built on GitHub</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var bar = document.querySelector(".progress");
+      var ticking = false;
+
+      function updateProgress() {
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - doc.clientHeight;
+        bar.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + "%";
+        ticking = false;
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updateProgress);
+        }
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+      updateProgress();
+
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
